@@ -12,20 +12,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(roller)
 ```
----
-title: "Workout3"
-author: "Ethan M."
-date: "December 2, 2018"
-output: github_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r}
-library(roller)
-```
 
 ### General Information
 
