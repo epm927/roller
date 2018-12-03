@@ -1,4 +1,4 @@
-#' @title device
+#' @title Creating a Device
 #' @description Creates an object of class device
 #' @param sides vector of (at least 2) sides, default of 1 and 2
 #' @param prob probability for each side

@@ -2,7 +2,7 @@
 % Please edit documentation in R/device.R
 \name{device}
 \alias{device}
-\title{device}
+\title{Creating a Device}
 \usage{
 device(sides = c(1, 2), prob = c(0.5, 0.5))
 }

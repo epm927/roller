@@ -4,12 +4,12 @@
 \alias{roll}
 \title{Rolling a device}
 \usage{
-roll(device, times)
+roll(device, times = 1)
 }
 \arguments{
 \item{device}{object of class "device", with at least two sides and appropriate probability values}
 
-\item{times}{the number of times the device is to be rolled}
+\item{times}{the number of times the device is to be rolled (must be a positive integer); default 1}
 }
 \value{
 The observed rolls

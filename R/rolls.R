@@ -1,7 +1,7 @@
 #' @title Rolling a device
 #' @description Simulates rolling the specified device.
 #' @param device object of class "device", with at least two sides and appropriate probability values
-#' @param times the number of times the device is to be rolled
+#' @param times the number of times the device is to be rolled (must be a positive integer); default 1
 #' @return The observed rolls
 #' @export
 roll <- function(device, times = 1) {

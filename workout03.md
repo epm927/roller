@@ -128,3 +128,71 @@ die200$total
 ```
 
     ## [1] 200
+
+ 
+
+### Some Examples:
+
+Here are some examples of how to use the advanced functionality of the `Roller` Package:
+
+``` r
+# roll fair 8-sided die
+set.seed(123)
+fair_dev <- device(sides = letters[1:8], prob = rep(1/8, 8))
+fair500 <- roll(fair_dev, times = 500)
+
+# summary method
+summary(fair500)
+```
+
+    ## summary "rolls"
+    ## 
+    ##   side count  prop
+    ## 1    a    63 0.126
+    ## 2    b    54 0.108
+    ## 3    c    73 0.146
+    ## 4    d    69 0.138
+    ## 5    e    69 0.138
+    ## 6    f    51 0.102
+    ## 7    g    65 0.130
+    ## 8    h    56 0.112
+
+``` r
+# extracting roll in position 500
+fair500[500]
+```
+
+    ## [1] "h"
+
+``` r
+# replacing last roll
+fair500[500] <- 'a'
+fair500[500]
+```
+
+    ## [1] "a"
+
+``` r
+# adding 100 rolls
+fair600 <- fair500 + 100
+summary(fair600)
+```
+
+    ## summary "rolls"
+    ## 
+    ##   side count      prop
+    ## 1    a    79 0.1316667
+    ## 2    b    69 0.1150000
+    ## 3    c    78 0.1300000
+    ## 4    d    85 0.1416667
+    ## 5    e    78 0.1300000
+    ## 6    f    67 0.1116667
+    ## 7    g    74 0.1233333
+    ## 8    h    70 0.1166667
+
+``` r
+# plot method
+plot(fair500)
+```
+
+![](workout03_files/figure-markdown_github/unnamed-chunk-7-1.png)
