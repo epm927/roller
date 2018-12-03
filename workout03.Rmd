@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(roller)
+set.seed(123)
 ```
 
 ### General Information
@@ -55,6 +56,21 @@ This package comes with a default `plot()` function, which produces a frequency 
 die <- device(sides = 1:6, prob = rep(1/6, 6))
 rolls100 <- roll(die, 100)
 plot(rolls100)
+```
+
+\ 
+
+### Additional methods
+
+You can subset, replace, and add rolls using `[`, `[<-`, and `+`< respectively:
+
+```{r}
+die100 <- roll(die, 100)
+die100[30]
+die100[30] <- 2
+die200 <- die100 + 100
+summary(die200)
+die200$total
 ```
 
 
