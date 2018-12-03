@@ -4,7 +4,7 @@
 #' @param times the number of times the device is to be rolled
 #' @return The observed rolls
 #' @export
-roll <- function(device, times) {
+roll <- function(device, times = 1) {
   check_times(times)
   sample <- sample(device$sides,
                    size = times,
